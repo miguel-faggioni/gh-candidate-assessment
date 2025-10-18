@@ -63,10 +63,6 @@ const Feed = () => {
 
   return (
     <div className="feed">
-      <div className="feed-header">
-        <h2 className="feed-title">Music Feed</h2>
-        <p className="feed-subtitle">Discover what your friends are listening to</p>
-      </div>
       
       <div className="feed-items">
         {feedItems.map(item => (
