@@ -17,14 +17,15 @@ const FeedItem = ({ item, onFollowToggle }) => {
     
     // Rotate counterclockwise by 120 degrees (0 to -120)
     const rotation = -120 * exitProgress;
-    // Scale down from 100% to 0% (1 to 0)
+    // Scale down from 100% to 0% (1 to 0) - twice as fast
+    //const scale = Math.max(0, 1 - (exitProgress * 2));
     const scale = 1 - exitProgress;
     
     return `rotate(${rotation}deg) scale(${scale})`;
   };
 
   return (
-    <article ref={ref} className="feed-item" style={{ '--bg-color': backgroundColor }}>
+    <article className="feed-item" style={{ '--bg-color': backgroundColor }}>
     <div className="feed-item__content">
 
 
@@ -53,10 +54,14 @@ const FeedItem = ({ item, onFollowToggle }) => {
 
           <div className="song-image-container">
             <img
+              ref={ref}
               src={image}
               alt={`${singer} - ${songName}`}
               className={`song-image ${isExiting ? 'exiting' : ''}`}
-              style={{ transform: getImageTransform() }}
+              style={{ 
+                transform: getImageTransform(),
+                transformOrigin: 'center center'
+              }}
             />
           </div>
 
