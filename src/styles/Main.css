@@ -1,0 +1,11 @@
+.main {
+  padding: 2rem 0;
+  background: #f8fafc;
+  min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem 0;
+  }
+}
