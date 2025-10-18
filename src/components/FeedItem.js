@@ -11,7 +11,23 @@ const FeedItem = ({ item, onFollowToggle }) => {
 
   return (
     <article className="feed-item" style={{ '--bg-color': backgroundColor }}>
-      <div className="feed-item__content">
+    <div className="feed-item__content">
+
+
+    
+        {/* User Comment Section */}
+        <div className="user-comment-section">
+          <UserCard 
+            user={user} 
+    onFollowToggle={handleFollowClick}
+    comment={comment}
+          />
+          {/* <div className="comment-content">
+            <p className="comment-text">"{comment}"</p>
+          </div> */}
+        </div> 
+
+    
         {/* Song Information */}
         <div className="song-info">
 
@@ -32,17 +48,6 @@ const FeedItem = ({ item, onFollowToggle }) => {
         </div>
 
 
-
-        {/* User Comment Section */}
-        {/*  <div className="user-comment-section">
-          <UserCard 
-            user={user} 
-            onFollowToggle={handleFollowClick}
-          />
-          <div className="comment-content">
-            <p className="comment-text">{comment}</p>
-          </div>
-        </div> */}
 
         {/* Action Buttons */}
         {/* <div className="feed-item__actions">

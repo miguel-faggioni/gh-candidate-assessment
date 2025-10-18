@@ -1,21 +1,24 @@
 .feed-item {
   
 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
   overflow: hidden;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border: 1px solid #e2e8f0;
+
 }
 
 
 
 .feed-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+
 }
 
 .feed-item__content {
   padding: 1.5rem;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .song-info {
@@ -103,22 +106,20 @@
 }
 
 .user-comment-section {
-  margin-bottom: 1.5rem;
+padding: 0 12px;
 }
 
 .comment-content {
-  margin-top: 1rem;
-  padding-left: 3.5rem;
+  margin-top: 0.75rem;
 }
 
 .comment-text {
-  color: #4a5568;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  background: #f7fafc;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  border-left: 3px solid var(--bg-color, #3182ce);
+  color: #2d3748;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  max-width: 250px;
 }
 
 .feed-item__actions {
