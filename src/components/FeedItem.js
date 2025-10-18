@@ -14,16 +14,16 @@ const FeedItem = ({ item, onFollowToggle }) => {
       <div className="feed-item__content">
         {/* Song Information */}
         <div className="song-info">
-          
-    <div className="song-details">
 
-    <h3 className="song-artist">{singer}</h3>
-    <h4 className="song-title">{songName}</h4>
-    </div>
+          <div className="song-details">
 
-              <div className="song-image-container">
-            <img 
-              src={image} 
+            <h3 className="song-artist">{singer}</h3>
+            <h4 className="song-title">{songName}</h4>
+          </div>
+
+          <div className="song-image-container">
+            <img
+              src={image}
               alt={`${singer} - ${songName}`}
               className="song-image"
             />
@@ -32,9 +32,9 @@ const FeedItem = ({ item, onFollowToggle }) => {
         </div>
 
 
-    
+
         {/* User Comment Section */}
-       {/*  <div className="user-comment-section">
+        {/*  <div className="user-comment-section">
           <UserCard 
             user={user} 
             onFollowToggle={handleFollowClick}

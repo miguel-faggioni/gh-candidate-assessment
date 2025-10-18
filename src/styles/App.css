@@ -2,6 +2,14 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  background-image: linear-gradient(
+    to bottom,
+    #FFEEE8,
+    #F7F6F3,
+    #F7F6F3,
+    #ECE8FF
+  );
 }
 
 .App > * {
