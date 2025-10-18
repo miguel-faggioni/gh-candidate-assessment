@@ -14,29 +14,27 @@ const FeedItem = ({ item, onFollowToggle }) => {
       <div className="feed-item__content">
         {/* Song Information */}
         <div className="song-info">
-          <div className="song-image-container">
+          
+    <div className="song-details">
+
+    <h3 className="song-artist">{singer}</h3>
+    <h4 className="song-title">{songName}</h4>
+    </div>
+
+              <div className="song-image-container">
             <img 
               src={image} 
               alt={`${singer} - ${songName}`}
               className="song-image"
             />
-            <div className="song-overlay">
-              <div className="play-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-            </div>
           </div>
-          
-          <div className="song-details">
-            <h3 className="song-artist">{singer}</h3>
-            <h4 className="song-title">{songName}</h4>
-          </div>
+
         </div>
 
+
+    
         {/* User Comment Section */}
-        <div className="user-comment-section">
+       {/*  <div className="user-comment-section">
           <UserCard 
             user={user} 
             onFollowToggle={handleFollowClick}
@@ -44,10 +42,10 @@ const FeedItem = ({ item, onFollowToggle }) => {
           <div className="comment-content">
             <p className="comment-text">{comment}</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Action Buttons */}
-        <div className="feed-item__actions">
+        {/* <div className="feed-item__actions">
           <button className="action-btn action-btn--like" aria-label="Like">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -68,7 +66,7 @@ const FeedItem = ({ item, onFollowToggle }) => {
             </svg>
             <span>Share</span>
           </button>
-        </div>
+        </div> */}
       </div>
     </article>
   );
