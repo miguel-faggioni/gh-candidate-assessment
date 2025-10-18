@@ -1,16 +1,30 @@
 import React from 'react';
 import UserCard from './UserCard';
+import useScrollExitAnimation from '../utils/useScrollExitAnimation';
 import '../styles/FeedItem.css';
 
 const FeedItem = ({ item, onFollowToggle }) => {
   const { singer, songName, image, backgroundColor, user, comment } = item;
+  const [ref, exitProgress, isExiting] = useScrollExitAnimation();
 
   const handleFollowClick = () => {
     onFollowToggle(user.name, item.id);
   };
 
+  // Calculate transform values based on exit progress
+  const getImageTransform = () => {
+    if (!isExiting) return 'rotate(0deg) scale(1)';
+    
+    // Rotate counterclockwise by 120 degrees (0 to -120)
+    const rotation = -120 * exitProgress;
+    // Scale down from 100% to 0% (1 to 0)
+    const scale = 1 - exitProgress;
+    
+    return `rotate(${rotation}deg) scale(${scale})`;
+  };
+
   return (
-    <article className="feed-item" style={{ '--bg-color': backgroundColor }}>
+    <article ref={ref} className="feed-item" style={{ '--bg-color': backgroundColor }}>
     <div className="feed-item__content">
 
 
@@ -41,7 +55,8 @@ const FeedItem = ({ item, onFollowToggle }) => {
             <img
               src={image}
               alt={`${singer} - ${songName}`}
-              className="song-image"
+              className={`song-image ${isExiting ? 'exiting' : ''}`}
+              style={{ transform: getImageTransform() }}
             />
           </div>
 

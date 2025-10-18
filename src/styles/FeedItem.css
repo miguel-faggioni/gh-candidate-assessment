@@ -45,6 +45,12 @@
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   align-self: end;
+  transition: transform 0.1s ease-out;
+  transform-origin: center center;
+}
+
+.song-image.exiting {
+  /* Animation will be applied via inline styles based on scroll progress */
 }
 
 .song-overlay {
