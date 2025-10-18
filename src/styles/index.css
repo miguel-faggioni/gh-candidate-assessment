@@ -1,3 +1,84 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Yellix';
+  src: url('../assets/fonts/Yellix-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yellix';
+  src: url('../assets/fonts/Yellix-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yellix';
+  src: url('../assets/fonts/Yellix-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yellix';
+  src: url('../assets/fonts/Yellix-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yellix';
+  src: url('../assets/fonts/Yellix-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Casion Ionic App';
+  src: url('../assets/fonts/CasionIonicApp-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Casion Ionic App';
+  src: url('../assets/fonts/CasionIonicApp-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Casion Ionic App';
+  src: url('../assets/fonts/CasionIonicApp-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Casion Ionic App';
+  src: url('../assets/fonts/CasionIonicApp-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Casion Ionic App';
+  src: url('../assets/fonts/CasionIonicApp-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Reset and base styles */
 * {
   margin: 0;

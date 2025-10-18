@@ -86,6 +86,7 @@
 }
 
 .song-artist {
+  font-family: 'Yellix', sans-serif;
   font-size: 12px;
   font-weight: 350;
   color: white;
@@ -94,6 +95,7 @@
 }
 
 .song-title {
+  font-family: 'Casion Ionic App', serif;
   font-size: 22px;
   color: white;
   font-weight: 400;
